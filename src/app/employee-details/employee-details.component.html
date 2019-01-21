@@ -1,0 +1,65 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="">Dashboard</a></li>
+      <li class="breadcrumb-item" ><a routerLink="/employees">Employees</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{id}}</li>
+    </ol>
+  </nav>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <a routerLink="/employees" class="btn btn-sm btn-outline-secondary">
+      Back
+    </a>
+  </div>
+</div>
+<h4 class="text-muted">Details</h4>
+<div class="card" style="width: 100%;">
+  <div class="card-body">
+    <h5 class="card-title">{{Employee.name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{Employee.role}}</h6>
+    <p class="card-text">{{Employee.email}}</p>
+    <a href="" class="card-link">Change info</a>
+    <a href="" class="card-link">Update password</a>
+  </div>
+</div>
+<br>
+<h4 class="text-muted">Next shifts</h4>
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Schedule</th>
+      <th scope="col">Date</th>
+      <th scope="col">Shift</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>a</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <div *ngIf="" class="card text-center">
+  <div class="card-header">
+    Oops!
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Erorr 404</h5>
+    <p class="card-text">Not found, go to Employees page.  </p>
+    <a routerLink="/insert_employee" class="btn btn-outline-primary">Employess table</a>
+  </div>
+</div>
+<div *ngIf="" class="card text-center">
+  <div class="card-header">
+    Oops!
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Erorr 400</h5>
+    <p class="card-text">Wrong id format, go to Employees page.  </p>
+    <a routerLink="/insert_employee" class="btn btn-outline-primary">Employess table</a>
+  </div>
+</div> -->

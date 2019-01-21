@@ -1,0 +1,55 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="">Dashboard</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Schedules</li>
+    </ol>
+  </nav>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <a routerLink="/new_schedule" class="btn btn-sm btn-outline-secondary">
+      Create Schedule 
+    </a>
+  </div>
+</div>
+<div *ngIf="schedules.length == 0" class="card text-center">
+  <div class="card-header">
+    Oops!
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">I say something, and then it usually happens. Maybe not on schedule, but it usually happens.</h5>
+    <p class="card-text">Empty schedules aray</p>
+    <a routerLink="" class="btn btn-outline-primary">Insert form</a>
+  </div>
+</div>
+<div *ngIf="schedules.length > 0">
+  <h4 class="text-muted">Schedules list</h4>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">id</th>
+        
+        <th scope="col">Weeks</th>
+        <th scope="col">Employees</th>
+        
+        <th scope="col">Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let schedule of schedules; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{schedule.id}}</td>
+        
+        <td>{{schedule.weeks}}</td>
+        
+        <td>{{schedule.employees}}</td>
+
+        <td>
+            <a routerLink="" class="btn btn-outline-primary btn-space">Details</a>
+            <button type="button" class="btn btn-outline-danger btn-space">Delete</button>
+        </td>        
+      </tr>
+    </tbody>
+  </table>
+</div>
