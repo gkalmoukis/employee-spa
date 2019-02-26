@@ -16,32 +16,14 @@
 <div class="card" style="width: 100%;">
   <div class="card-body">
     <h5 class="card-title">{{Employee.name}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{Employee.role}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{role_string(Employee.role)}}</h6>
     <p class="card-text">{{Employee.email}}</p>
-    <a href="" class="card-link">Change info</a>
-    <a href="" class="card-link">Update password</a>
+    <!-- <a routerLink="." class="card-link">Change info</a>
+    <a routerLink="." class="card-link">Update password</a> -->
   </div>
 </div>
 <br>
-<h4 class="text-muted">Next shifts</h4>
-<table class="table table-hover table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Schedule</th>
-      <th scope="col">Date</th>
-      <th scope="col">Shift</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>a</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-  </tbody>
-</table>
+
 
 <!-- <div *ngIf="" class="card text-center">
   <div class="card-header">
